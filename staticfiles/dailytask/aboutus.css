@@ -1,0 +1,109 @@
+/* General styling */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-header h1 {
+    color: #0059b3;
+    font-size: 2.5em;
+}
+
+.about-header p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.about-section {
+    margin-bottom: 20px;
+    padding: 10px; /* Add padding for inner spacing */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+.about-section h2 {
+    color: #0073e6;
+    font-size: 1.8em;
+  
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 1em;
+    color: #444;
+}
+
+.about-section ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style-type: none; 
+}
+
+.about-section li {
+    margin: 15px 0; /* Space between items */
+    padding: 10px; /* Inner padding for list items */
+    background: #e9f5ff; /* Light background for visibility */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow-wrap: break-word; /* Prevent overflow for long text */
+}
+
+.about-section strong {
+    color: #0059b3;
+}
+
+/* Mobile-specific styling */
+@media (max-width: 600px) {
+    .about-container {
+        margin: 20px; /* Reduce margins for smaller screens */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .about-header h1 {
+        font-size: 1.8em; /* Smaller font size */
+    }
+    
+    .about-section p {
+        font-size: 1em;
+        color: #444;
+    }
+
+    .about-section h2 {
+        font-size: 1.5em; /* Smaller font size */
+    }
+
+    .about-section p {
+        font-size: 0.9em; /* Smaller font size */
+    }
+
+    .about-section ui {
+        font-size: 0.9em; /* Adjust font size for mobile */
+        margin: 10px 0; /* Adjust margin for better spacing */
+        padding: 8px; /* Slightly reduced padding for mobile */
+    }
+}
