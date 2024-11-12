@@ -77,7 +77,7 @@ a:hover {
 }
 
 /* Responsive media query code for small screen */
-@media (max-width: 890px) {
+@media (max-width: 960px) {
   .checkbtn {
     display: block;
   }
