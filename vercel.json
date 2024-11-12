@@ -10,13 +10,14 @@
       }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/staticfiles/$1"
-      },
+      
       {
         "src": "/(.*)",
         "dest": "focusflow/wsgi.py"
+      },
+      {
+        "src": "/staticfiles/(.*)",
+        "dest": "/staticfiles/$1"
       }
     ],
     "buildCommand": "python manage.py collectstatic --noinput"
