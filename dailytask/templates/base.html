@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Responsive Navbar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'dailytask/base.css' %}">
+  <!-- Font Awesome Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <nav>
+    <!-- Checkbox for toggling menu -->
+    <input type="checkbox" id="check">
+
+    <!-- Menu icon -->
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <!-- Site logo -->
+    <label class="logo">FocusFLow</label>
+
+    <!-- Navigation links -->
+    <ul>
+      <li><a class="active" href="{%url 'home'%}">Home</a></li>
+      <li><a href="{%url 'today'%}">Today</a></li>
+  
+      <li><a href="{%url 'alltask'%}">ALL-Task</a></li>
+      <li><a href="{%url 'analysis'%}">Analysis</a></li>
+      <li><a href="{%url 'aboutus'%}">About_us</a></li>
+      <li><a href="{% url 'logoutpage' %}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      
+    </ul>
+  </nav>
+
+  <!-- Section for image -->
+  
+  {% block content %}
+
+  {% endblock %}
+</body>
+
+</html>

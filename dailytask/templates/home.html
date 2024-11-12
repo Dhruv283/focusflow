@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow Task Manager</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{%static 'dailytask/home.css'%}"> 
+</head>
+<body>
+    
+    <div class="focusflow-body-wrapper" style="align-items: center; justify-content: center; display: flex; width: 98%;  ">
+        <div class="focusflow-container">
+            <h1>FocusFlow</h1>
+            
+            <form class="focusflow-task-form" method="post">
+                {% csrf_token %}
+                <div class="focusflow-form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="focusflow-task-date" name="date" required>
+                </div>
+                
+                <div class="focusflow-form-group">
+                    <label for="taskname">Task List:</label>
+                    <input type="text" id="focusflow-task-list" name="taskname" placeholder="Enter your task" required>
+                </div>
+
+                <div class="focusflow-form-group">
+                    <label for="taskpriority">Priority:</label>
+                    <select id="focusflow-priority" name="taskpriority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="focusflow-submit-button">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+{% endblock %}
+

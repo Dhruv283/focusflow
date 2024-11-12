@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Table</title>
+    <link rel="stylesheet" href="{%static 'dailytask/alltask.css'%}">
+</head>
+<body>
+
+    <div class="task-table-wrapper">
+        <table class="task-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Task Name</th>
+                    <th>Priority</th>
+                    <th>Options</th>
+                    <th>Status</th>
+                    <th>Mark as Completed</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in tasklist%}
+                    <tr>
+                        <td data-label="Date">{{i.date}}</td>
+                        <td data-label="Task Name">{{i.taskname}}</td>
+                        <td data-label="Priority"><span class="priority {{i.taskpriority}}">{{i.taskpriority}}</span></td>
+                        <td data-label="Options">
+                            <a href="{% url 'delete' i.id %}"type="submit"><span class="delete-icon" >&#128465;</span></a>
+                        </td>
+                        <td data-label="Status" class="status">{{i.status}}</td>
+                        
+                        <td data-label="Mark as Completed">
+                            {% if i.status == 'Not Completed' %}
+                                <a href="{% url 'status' i.id %}" type="submit">&#9989;<a>
+                       
+                            {% endif %}
+                            <!-- <input type="checkbox" class="complete-checkbox" onclick="updateStatus(this)"> -->
+                        </td>
+                    </tr>
+                {% endfor %}
+                
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+    
+
+<script>
+    function updateStatus(checkbox) {
+        const statusCell = checkbox.closest('tr').querySelector('.status');
+        statusCell.textContent = checkbox.checked ? "Completed" : "Not Completed";
+    }
+</script>
+
+</body>
+</html>
+
+{% endblock %}

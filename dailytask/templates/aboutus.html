@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FocusFlow</title>
+    <link rel="stylesheet" href="{%static 'dailytask/aboutus.css'%}">
+</head>
+<body>
+    <div class="body-wrapper" style="align-items: center; justify-content: center; display: flex; width: 98%;  ">
+        <div class="about-container">
+            <section class="about-header">
+                <h1>About FocusFlow</h1>
+                <p>Your organized space for effective task management and productivity enhancement.</p>
+            </section>
+
+            <section class="about-section">
+                <h2>Who Built This Service</h2>
+                <p>FocusFlow was built by Dhruv Patel, a passionate developer located in Waterloo, Canada. Dhruv has a strong background in web development with a focus on Django and Python. With a dedication to efficient software design and a user-centered approach, Dhruv developed FocusFlow to address common productivity challenges faced by users.</p>
+            </section>
+
+            <section class="about-section">
+                <h2>Purpose</h2>
+                <p>The purpose of FocusFlow is to provide users with an intuitive and streamlined experience for managing their daily tasks. The service is designed to boost productivity by offering a platform that is easy to use and customize, keeping users focused on what matters most to them.</p>
+            </section>
+
+            <section class="about-section">
+                <h2>Key Features</h2>
+                
+                <li><strong>Task Management:</strong> Organize tasks with due dates, categories, and priority levels to keep track of your to-do list efficiently.</li>
+                <li><strong>Priority Tagging:</strong> Label tasks with different priority levels (High, Medium, Low) to focus on what needs immediate attention.</li>
+                <li><strong>Calendar View:</strong> A calendar integrated with your tasks allows for a clear view of deadlines and helps in planning ahead.</li>
+                <li><strong>Completion Tracking:</strong> Mark tasks as completed and track your progress over time to stay motivated.</li>
+                <li><strong>Responsive Design:</strong> Optimized for both desktop and mobile, ensuring you can stay productive on the go.</li>
+                
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

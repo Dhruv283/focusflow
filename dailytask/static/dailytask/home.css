@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.focusflow-container {
+    
+    max-width: 500px;
+    width: 90%;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+    /* background: -webkit-linear-gradient(right,#003366,#004080,#0059b3, #0073e6); */
+    padding: 15px;
+    color: white;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 5px;
+}
+ 
+.focusflow-task-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.focusflow-form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.focusflow-form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333333;
+} 
+
+input[type="date"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d9e6;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"]::placeholder {
+    color: #bbb;
+}
+
+.focusflow-submit-button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.focusflow-submit-button:hover {
+    /* background-color: #005bb5; */
+    background: -webkit-linear-gradient(right,#003366,#004080,#0059b3, #0073e6);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+    
+    .focusflow-container {
+        margin-top: 50px;
+        padding: 15px;
+    }
+
+    .focusflow-submit-button {
+        font-size: 14px;
+        padding: 8px;
+    }
+} 

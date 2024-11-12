@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="{%static 'dailytask/analysis.css'%}">
+</head>
+<body>
+    <div class="body-wrapper" style="align-items: center; justify-content: center; display: flex; width: 98%;  ">
+
+    
+        <div class="coming-soon-container">
+            <div class="icon">🚧</div>
+            <h1>Feature Under Development</h1>
+            <p>We're working on this feature. It will be available soon!</p>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}
