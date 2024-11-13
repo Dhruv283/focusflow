@@ -156,7 +156,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 
 ANYMAIL = {
-    "SENDINBLUE_API_KEY": "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",  # Your Brevo API key
+    "SENDINBLUE_API_KEY": os.getenv("SENDINBLUE_API_KEY"),  # Fetch from environment variable
 }
 
 DEFAULT_FROM_EMAIL = "pateldhruv2830@gmail.com"  # Your verified custom domain email
